@@ -17,8 +17,12 @@ public class Quantity<U extends IMeasurable> {
         return targetUnit.fromBaseUnit(baseValue);
     }
 
-    // 🔥 CENTRALIZED METHOD
+    // 🔥 CENTRALIZED ARITHMETIC METHOD
     private Quantity<U> operate(Quantity<U> other, char operation) {
+
+        // 🔥 validate arithmetic support
+        unit.validateOperationSupport(String.valueOf(operation));
+
         double result;
 
         switch (operation) {
@@ -45,6 +49,7 @@ public class Quantity<U extends IMeasurable> {
     }
 
     public double divide(Quantity<U> other) {
+        unit.validateOperationSupport("divide");
         return this.toBase() / other.toBase();
     }
 
@@ -52,6 +57,9 @@ public class Quantity<U extends IMeasurable> {
     public boolean equals(Object obj) {
         if (this == obj) return true;
         if (!(obj instanceof Quantity<?> other)) return false;
+
+        // 🔥 prevent cross-category comparison
+        if (this.unit.getClass() != other.unit.getClass()) return false;
 
         return Double.compare(this.toBase(), other.toBase()) == 0;
     }
