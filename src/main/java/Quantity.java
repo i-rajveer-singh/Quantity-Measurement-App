@@ -1,3 +1,5 @@
+import common.IMeasurable;
+
 public class Quantity<U extends IMeasurable> {
 
     private final double value;

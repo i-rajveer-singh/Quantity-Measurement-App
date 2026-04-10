@@ -1,3 +1,5 @@
+import common.IMeasurable;
+
 public enum WeightUnit implements IMeasurable {
 
     KILOGRAM(1),
