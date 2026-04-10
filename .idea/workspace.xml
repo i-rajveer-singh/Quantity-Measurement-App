@@ -4,8 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bae560f4-5de6-4e57-9a6f-b0e9b69fad0c" name="Changes" comment="[Rajveer]:Initial File Setup">
-      <change beforePath="$PROJECT_DIR$/.idea/src/main/java/QuantityMeasurementApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/src/main/java/QuantityMeasurementApp.java" afterDir="false" />
+    <list default="true" id="bae560f4-5de6-4e57-9a6f-b0e9b69fad0c" name="Changes" comment="[Rajveer]:UC3:refactored using LengthUnit enum for unit conversion">
+      <change afterPath="$PROJECT_DIR$/src/main/java/LengthUnit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/QuantityLength.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/QuantityMeasurementApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Quantity-Measurement-App.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Quantity-Measurement-App.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/src/main/java/Feet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Feet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/src/main/java/Inches.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Inches.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/src/main/java/QuantityMeasurementApp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,7 +20,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="6" />
+    <option name="cachedIndexableFilesCount" value="12" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -25,7 +32,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="develop" />
+        <entry key="$PROJECT_DIR$" value="feature/UC4-ExtendedUnitSupport" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -62,13 +69,21 @@
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "feature/UC3-QuantityClass",
+    "git-widget-placeholder": "feature/UC5-UnitConversion",
     "ignore.virus.scanning.warn.message": "true",
     "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
     "to.speed.mode.migration.done": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Rajveer Singh\IdeaProjects\Quantity-Measurement-App" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -123,6 +138,7 @@
     <MESSAGE value="Initial commit" />
     <MESSAGE value="[Rajveer]:Initial File Setup" />
     <MESSAGE value="[Rajveer]:UC2:Feet to Inches conversion test" />
-    <option name="LAST_COMMIT_MESSAGE" value="[Rajveer]:UC2:Feet to Inches conversion test" />
+    <MESSAGE value="[Rajveer]:UC3:refactored using LengthUnit enum for unit conversion" />
+    <option name="LAST_COMMIT_MESSAGE" value="[Rajveer]:UC3:refactored using LengthUnit enum for unit conversion" />
   </component>
 </project>

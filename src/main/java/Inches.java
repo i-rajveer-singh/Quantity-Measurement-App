@@ -1,3 +1,4 @@
+
 public class Inches {
     private final double value;
 
