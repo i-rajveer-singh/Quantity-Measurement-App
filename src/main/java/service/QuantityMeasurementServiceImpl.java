@@ -2,9 +2,10 @@ package service;
 
 import model.QuantityModel;
 import common.IMeasurable;
-
+import repository.MeasurementRepository;
 public class QuantityMeasurementServiceImpl {
 
+    private final MeasurementRepository repo = new MeasurementRepository();
     public <U extends IMeasurable> boolean compare(QuantityModel<U> q1, QuantityModel<U> q2) {
         double base1 = q1.getUnit().toBaseUnit(q1.getValue());
         double base2 = q2.getUnit().toBaseUnit(q2.getValue());
@@ -17,9 +18,17 @@ public class QuantityMeasurementServiceImpl {
     }
 
     public <U extends IMeasurable> double add(QuantityModel<U> q1, QuantityModel<U> q2, U targetUnit) {
+
         double base1 = q1.getUnit().toBaseUnit(q1.getValue());
         double base2 = q2.getUnit().toBaseUnit(q2.getValue());
-        double result = base1 + base2;
-        return targetUnit.fromBaseUnit(result);
+
+        double resultBase = base1 + base2;
+
+        double result = targetUnit.fromBaseUnit(resultBase);
+
+        // 🔥 NEW LINE (UC16)
+        repo.save(result, targetUnit.getUnitName());
+
+        return result;
     }
 }
