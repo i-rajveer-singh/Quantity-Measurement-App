@@ -7,39 +7,37 @@ public class QuantityLength {
         this.unit = unit;
     }
 
-    private double toFeet() {
-        return unit.toFeet(value);
+    private double toBase() {
+        return unit.convertToBase(value);
     }
 
     public double convertTo(LengthUnit targetUnit) {
-        double valueInFeet = unit.toFeet(this.value);
-        return targetUnit.fromFeet(valueInFeet);
+        double valueInBase = unit.convertToBase(this.value);
+        return targetUnit.convertFromBase(valueInBase);
     }
 
     //  UC6 method
     public double add(QuantityLength other) {
-        double thisInFeet = this.unit.toFeet(this.value);
-        double otherInFeet = other.unit.toFeet(other.value);
+        double thisInBase = this.unit.convertToBase(this.value);
+        double otherInBase = other.unit.convertToBase(other.value);
 
-        return thisInFeet + otherInFeet;
+        return thisInBase + otherInBase;
     }
-
-    // UC7 method
+    //  UC7 method
     public double add(QuantityLength other, LengthUnit targetUnit) {
-        double thisInFeet = this.unit.toFeet(this.value);
-        double otherInFeet = other.unit.toFeet(other.value);
+        double thisInBase = this.unit.convertToBase(this.value);
+        double otherInBase = other.unit.convertToBase(other.value);
 
-        double resultInFeet = thisInFeet + otherInFeet;
+        double resultInBase = thisInBase + otherInBase;
 
-        return targetUnit.fromFeet(resultInFeet);
+        return targetUnit.convertFromBase(resultInBase);
     }
-
     @Override
     public boolean equals(Object obj) {
         if (this == obj) return true;
         if (!(obj instanceof QuantityLength)) return false;
 
         QuantityLength other = (QuantityLength) obj;
-        return Double.compare(this.toFeet(), other.toFeet()) == 0;
+        return Double.compare(this.toBase(), other.toBase()) == 0;
     }
 }

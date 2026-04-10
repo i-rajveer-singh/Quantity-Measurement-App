@@ -10,11 +10,11 @@ public enum LengthUnit {
         this.conversionFactor = conversionFactor;
     }
 
-    public double toFeet(double value) {
+    public double convertToBase(double value) {
         return value * conversionFactor;
     }
 
-    public double fromFeet(double value) {
-        return value / conversionFactor;
+    public double convertFromBase(double baseValue) {
+        return baseValue / conversionFactor;
     }
 }
