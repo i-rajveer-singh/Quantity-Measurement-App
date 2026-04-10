@@ -1,5 +1,4 @@
 public interface IMeasurable {
-    double convertToBase(double value);
-    double convertFromBase(double baseValue);
-    String getUnitName();
+    double toBaseUnit(double value);
+    double fromBaseUnit(double value);
 }

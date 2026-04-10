@@ -1,14 +1,12 @@
 public class QuantityMeasurementApp {
+
     public static void main(String[] args) {
 
-        Quantity<LengthUnit> l1 = new Quantity<>(1.0, LengthUnit.FEET);
-        Quantity<LengthUnit> l2 = new Quantity<>(12.0, LengthUnit.INCH);
+        Quantity<VolumeUnit> l1 = new Quantity<>(1.0, VolumeUnit.LITRE);
+        Quantity<VolumeUnit> ml = new Quantity<>(1000.0, VolumeUnit.MILLILITRE);
+        Quantity<VolumeUnit> gallon = new Quantity<>(0.264172, VolumeUnit.GALLON);
 
-        System.out.println(l1.equals(l2)); // true
-
-        Quantity<WeightUnit> w1 = new Quantity<>(1.0, WeightUnit.KILOGRAM);
-        Quantity<WeightUnit> w2 = new Quantity<>(1000.0, WeightUnit.GRAM);
-
-        System.out.println(w1.equals(w2)); // true
+        System.out.println(l1.equals(ml));      // true
+        System.out.println(l1.equals(gallon));  // true (approx)
     }
 }
