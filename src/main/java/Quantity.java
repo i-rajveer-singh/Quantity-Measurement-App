@@ -12,10 +12,25 @@ public class Quantity<U extends IMeasurable> {
         return unit.toBaseUnit(value);
     }
 
-    public Quantity<U> convertTo(U targetUnit) {
-        double baseValue = unit.toBaseUnit(value);
-        double converted = targetUnit.fromBaseUnit(baseValue);
-        return new Quantity<>(converted, targetUnit);
+    public double convertTo(U targetUnit) {
+        double baseValue = this.toBase();
+        return targetUnit.fromBaseUnit(baseValue);
+    }
+
+    public Quantity<U> add(Quantity<U> other) {
+        double sum = this.toBase() + other.toBase();
+        double result = unit.fromBaseUnit(sum);
+        return new Quantity<>(result, unit);
+    }
+
+    public Quantity<U> subtract(Quantity<U> other) {
+        double diff = this.toBase() - other.toBase();
+        double result = unit.fromBaseUnit(diff);
+        return new Quantity<>(result, unit);
+    }
+
+    public double divide(Quantity<U> other) {
+        return this.toBase() / other.toBase();
     }
 
     @Override
