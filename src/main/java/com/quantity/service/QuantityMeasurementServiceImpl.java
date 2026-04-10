@@ -2,7 +2,8 @@ package com.quantity.service;
 
 import com.quantity.model.QuantityModel;
 import com.quantity.common.IMeasurable;
-import repository.MeasurementRepository;
+import com.quantity.repository.MeasurementRepository;
+
 public class QuantityMeasurementServiceImpl {
 
     private final MeasurementRepository repo = new MeasurementRepository();

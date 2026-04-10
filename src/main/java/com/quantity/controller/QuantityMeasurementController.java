@@ -28,6 +28,6 @@ public class QuantityMeasurementController {
         QuantityModel q1 = new QuantityModel(1.0, LengthUnit.FEET);
         QuantityModel q2 = new QuantityModel(12.0, LengthUnit.INCH);
 
-        return service.equals(q1, q2);
+        return service.compare(q1, q2);
     }
 }

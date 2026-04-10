@@ -4,8 +4,11 @@ import com.quantity.common.IMeasurable;
 
 public class QuantityModel<U extends IMeasurable> {
 
-    private final double value;
-    private final U unit;
+    private double value;
+    private U unit;
+
+    public QuantityModel() {
+    }
 
     public QuantityModel(double value, U unit) {
         this.value = value;
@@ -18,5 +21,13 @@ public class QuantityModel<U extends IMeasurable> {
 
     public U getUnit() {
         return unit;
+    }
+
+    public void setValue(double value) {
+        this.value = value;
+    }
+
+    public void setUnit(U unit) {
+        this.unit = unit;
     }
 }
