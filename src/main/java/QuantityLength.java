@@ -16,6 +16,24 @@ public class QuantityLength {
         return targetUnit.fromFeet(valueInFeet);
     }
 
+    //  UC6 method
+    public double add(QuantityLength other) {
+        double thisInFeet = this.unit.toFeet(this.value);
+        double otherInFeet = other.unit.toFeet(other.value);
+
+        return thisInFeet + otherInFeet;
+    }
+
+    // UC7 method
+    public double add(QuantityLength other, LengthUnit targetUnit) {
+        double thisInFeet = this.unit.toFeet(this.value);
+        double otherInFeet = other.unit.toFeet(other.value);
+
+        double resultInFeet = thisInFeet + otherInFeet;
+
+        return targetUnit.fromFeet(resultInFeet);
+    }
+
     @Override
     public boolean equals(Object obj) {
         if (this == obj) return true;
