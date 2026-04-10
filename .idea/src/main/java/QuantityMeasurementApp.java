@@ -1,5 +1,8 @@
 public class QuantityMeasurementApp {
     public static void main(String[] args) {
-        System.out.println("Quantity Measurement App Started");
+        Feet f1 = new Feet(1.0);
+        Feet f2 = new Feet(1.0);
+
+        System.out.println(f1.equals(f2)); // true
     }
 }
