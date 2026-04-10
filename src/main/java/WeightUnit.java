@@ -1,12 +1,11 @@
-public enum LengthUnit implements IMeasurable {
-    FEET(1),
-    INCH(1.0 / 12),
-    YARD(3),
-    CENTIMETER(1.0 / 30.48);
+public enum WeightUnit implements IMeasurable {
+    KILOGRAM(1),
+    GRAM(0.001),
+    POUND(0.453592);
 
     private final double conversionFactor;
 
-    LengthUnit(double conversionFactor) {
+    WeightUnit(double conversionFactor) {
         this.conversionFactor = conversionFactor;
     }
 
