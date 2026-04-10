@@ -1,14 +1,16 @@
-import common.IMeasurable;
+package com.quantity;
 
-public enum VolumeUnit implements IMeasurable {
+import com.quantity.common.IMeasurable;
 
-    LITRE(1),
-    MILLILITRE(0.001),
-    GALLON(3.78541);
+public enum WeightUnit implements IMeasurable {
+
+    KILOGRAM(1),
+    GRAM(0.001),
+    POUND(0.453592);
 
     private final double conversionFactor;
 
-    VolumeUnit(double conversionFactor) {
+    WeightUnit(double conversionFactor) {
         this.conversionFactor = conversionFactor;
     }
 

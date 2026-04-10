@@ -1,5 +1,7 @@
-import controller.QuantityMeasurementController;
-import model.QuantityModel;
+package com.quantity;
+
+import com.quantity.controller.QuantityMeasurementController;
+import com.quantity.model.QuantityModel;
 
 public class QuantityMeasurementApp {
 

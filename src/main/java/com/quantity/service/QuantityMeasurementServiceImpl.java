@@ -1,7 +1,7 @@
-package service;
+package com.quantity.service;
 
-import model.QuantityModel;
-import common.IMeasurable;
+import com.quantity.model.QuantityModel;
+import com.quantity.common.IMeasurable;
 import repository.MeasurementRepository;
 public class QuantityMeasurementServiceImpl {
 

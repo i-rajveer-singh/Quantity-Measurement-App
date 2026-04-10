@@ -1,4 +1,4 @@
-package common;
+package com.quantity.common;
 
 public interface IMeasurable {
     double toBaseUnit(double value);
