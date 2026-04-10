@@ -1,10 +1,10 @@
-public class QuantityMeasurementApp {
+class QuantityMeasurementApp {
     public static void main(String[] args) {
 
-        QuantityLength f = new QuantityLength(1.0, LengthUnit.FEET);
-        QuantityLength inch = new QuantityLength(2.0, LengthUnit.INCH);
+        QuantityWeight kg = new QuantityWeight(1.0, WeightUnit.KILOGRAM);
+        QuantityWeight g = new QuantityWeight(1000.0, WeightUnit.GRAM);
 
-        System.out.println(f.add(inch)); // UC6 → ~1.1666
-        System.out.println(f.add(inch, LengthUnit.INCH)); // UC7 → 14.0
+        System.out.println(kg.equals(g)); // true
+        System.out.println(kg.add(g, WeightUnit.KILOGRAM)); // 2.0
     }
 }
