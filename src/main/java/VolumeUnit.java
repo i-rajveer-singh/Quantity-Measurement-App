@@ -1,3 +1,5 @@
+import common.IMeasurable;
+
 public enum VolumeUnit implements IMeasurable {
 
     LITRE(1),

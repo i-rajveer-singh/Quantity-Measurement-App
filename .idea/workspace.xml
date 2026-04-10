@@ -5,11 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bae560f4-5de6-4e57-9a6f-b0e9b69fad0c" name="Changes" comment="[Rajveer]:UC13:Centralized arithmetic logic using operate method (DRY principle)">
-      <change afterPath="$PROJECT_DIR$/src/main/java/TemperatureUnit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/QuantityMeasurementController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/QuantityModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/service/QuantityMeasurementServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/IMeasurable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/IMeasurable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/IMeasurable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/common/IMeasurable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/LengthUnit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/LengthUnit.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Quantity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Quantity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/QuantityMeasurementApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/QuantityMeasurementApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/TemperatureUnit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TemperatureUnit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/VolumeUnit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/VolumeUnit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/WeightUnit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/WeightUnit.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,8 +28,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -71,7 +77,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "feature/UC14-Temperature",
+    "git-widget-placeholder": "develop",
     "ignore.virus.scanning.warn.message": "true",
     "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",

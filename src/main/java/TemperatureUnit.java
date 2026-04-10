@@ -1,3 +1,5 @@
+import common.IMeasurable;
+
 public enum TemperatureUnit implements IMeasurable {
 
     CELSIUS,
