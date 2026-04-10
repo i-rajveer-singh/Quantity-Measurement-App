@@ -15,7 +15,12 @@ public class QuantityLength {
         double valueInFeet = unit.toFeet(this.value);
         return targetUnit.fromFeet(valueInFeet);
     }
+    public double add(QuantityLength other) {
+        double thisInFeet = this.unit.toFeet(this.value);
+        double otherInFeet = other.unit.toFeet(other.value);
 
+        return thisInFeet + otherInFeet;
+    }
     @Override
     public boolean equals(Object obj) {
         if (this == obj) return true;
