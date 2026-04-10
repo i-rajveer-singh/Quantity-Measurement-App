@@ -17,16 +17,31 @@ public class Quantity<U extends IMeasurable> {
         return targetUnit.fromBaseUnit(baseValue);
     }
 
+    // 🔥 CENTRALIZED METHOD
+    private Quantity<U> operate(Quantity<U> other, char operation) {
+        double result;
+
+        switch (operation) {
+            case '+':
+                result = this.toBase() + other.toBase();
+                break;
+            case '-':
+                result = this.toBase() - other.toBase();
+                break;
+            default:
+                throw new IllegalArgumentException("Invalid operation");
+        }
+
+        double finalValue = unit.fromBaseUnit(result);
+        return new Quantity<>(finalValue, unit);
+    }
+
     public Quantity<U> add(Quantity<U> other) {
-        double sum = this.toBase() + other.toBase();
-        double result = unit.fromBaseUnit(sum);
-        return new Quantity<>(result, unit);
+        return operate(other, '+');
     }
 
     public Quantity<U> subtract(Quantity<U> other) {
-        double diff = this.toBase() - other.toBase();
-        double result = unit.fromBaseUnit(diff);
-        return new Quantity<>(result, unit);
+        return operate(other, '-');
     }
 
     public double divide(Quantity<U> other) {
